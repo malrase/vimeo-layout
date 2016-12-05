@@ -1,0 +1,19 @@
+// Breakpoints
+$screen-small: 350px;
+$screen-medium: 500px;
+$screen-large: 1200px;
+
+// Mixins
+
+@mixin bem($suffix) {
+  &#{$suffix} {
+    @content;
+  }
+}
+
+// Media Queries
+@mixin larger-than($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}

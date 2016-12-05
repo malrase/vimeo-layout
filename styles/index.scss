@@ -1,0 +1,44 @@
+
+@import "reset";
+@import "variables";
+
+body {
+  font-family: sans-serif;
+}
+
+.videos {
+  padding: 5rem 1rem;
+  @include bem("--primary") {
+    
+  }
+  @include bem("--secondary") {
+    background: black;
+    color: white;
+  }
+}
+
+.card {
+  margin: auto;
+  max-width: 800px;
+  
+  @include larger-than($screen-large) {
+    display: flex;
+  }
+  @include bem("__details") {
+    flex-grow: 1;
+  }
+  @include bem("__title") {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+  @include bem("__text") {
+    line-height: 1.2rem;
+  }
+  @include bem("__image") {
+    flex-grow: 1;
+    img {
+      max-width: 100%;
+    }
+  }
+}
