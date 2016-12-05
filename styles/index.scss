@@ -1,11 +1,14 @@
 @import "reset";
 @import "variables";
-@import "atoms";
-
-@import "card";
-@import "carousel";
 
 body {
   color: $text-color;
   font-family: "Helvetica Neue", sans-serif;
 }
+
+@import "atoms";
+
+@import "card";
+@import "carousel";
+
+

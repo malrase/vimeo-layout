@@ -35,6 +35,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+body {
+  color: #222;
+  font-family: "Helvetica Neue", sans-serif; }
+
 .button, .carousel__action {
   background: inherit;
   border: 1px solid #DDD;
@@ -135,7 +139,3 @@ table {
 
 .carousel--nichts-pasiert .carousel__image {
   background-image: url("https://upload.wikimedia.org/wikipedia/en/e/e0/A_Decent_Man_%282015_Swiss_film%29.png"); }
-
-body {
-  color: #222;
-  font-family: "Helvetica Neue", sans-serif; }

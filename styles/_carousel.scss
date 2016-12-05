@@ -48,6 +48,9 @@
   }
 }
 
+// Use a map for the poster URLs
+// This helps with the background/foreground poster images from the mockup
+
 $posters-map: (
   wilderpeople: "https://upload.wikimedia.org/wikipedia/en/4/44/Hunt_for_the_Wilderpeople.png",
   nichts-pasiert: "https://upload.wikimedia.org/wikipedia/en/e/e0/A_Decent_Man_%282015_Swiss_film%29.png",
