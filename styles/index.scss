@@ -25,6 +25,9 @@ body {
     display: flex;
   }
   @include bem("__details") {
+  @include bem("--image-left") {
+    flex-direction: row-reverse;
+  }
     flex-grow: 1;
   }
   @include bem("__title") {
