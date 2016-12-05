@@ -100,7 +100,7 @@ table {
   .carousel__background {
     background-position-y: 30%;
     background-size: 1200px;
-    filter: blur(5px);
+    filter: blur(15px);
     height: 100%;
     position: absolute;
     width: 100%;
