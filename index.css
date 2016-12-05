@@ -87,6 +87,55 @@ table {
     margin: 0 auto;
     max-width: 100%; }
 
+.carousel {
+  color: white;
+  position: relative; }
+  .carousel .carousel__previous, .carousel .carousel__next {
+    position: absolute;
+    top: 50%; }
+  .carousel__next {
+    right: 0; }
+  .carousel__item {
+    position: relative; }
+  .carousel__background {
+    background-position-y: 30%;
+    background-size: 1200px;
+    filter: blur(5px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1; }
+  .carousel__inner {
+    padding: 5rem; }
+    @media (min-width: 600px) {
+      .carousel__inner {
+        display: flex; } }
+  .carousel__image {
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 380px;
+    width: 100%; }
+  .carousel__details {
+    display: inline-block;
+    padding-top: 5rem; }
+  .carousel__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; }
+  .carousel__text {
+    margin-bottom: 1rem; }
+
+.carousel--wilderpeople .carousel__background {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/4/44/Hunt_for_the_Wilderpeople.png"); }
+
+.carousel--wilderpeople .carousel__image {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/4/44/Hunt_for_the_Wilderpeople.png"); }
+
+.carousel--nichts-pasiert .carousel__background {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/e/e0/A_Decent_Man_%282015_Swiss_film%29.png"); }
+
+.carousel--nichts-pasiert .carousel__image {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/e/e0/A_Decent_Man_%282015_Swiss_film%29.png"); }
+
 body {
   color: #222;
   font-family: "Helvetica Neue", sans-serif; }

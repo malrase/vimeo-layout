@@ -1,4 +1,48 @@
 .carousel {
+  color: white;
+  position: relative;
+  .carousel__previous, .carousel__next {
+    position: absolute;
+      top: 50%;
+  }
+  @include bem("__next") {
+      right: 0;
+  }
+  @include bem("__item") {
+    position: relative;
+  }
+  @include bem("__background") {
+    background-position-y: 30%;
+    background-size: 1200px;
+    filter: blur(5px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+  @include bem("__inner") {
+    padding: 5rem;
+    @include larger-than($screen-medium) {
+      display: flex;
+    }
+  }
+  @include bem("__image") {
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 380px;
+    width: 100%;
+  }
+  @include bem("__details") {
+    display: inline-block;
+    padding-top: 5rem;
+  }
+  @include bem("__title") {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  @include bem("__text") {
+    margin-bottom: 1rem;
+  }
   @include bem("__action") {
     @extend .button;
   }
@@ -10,6 +54,9 @@ $posters-map: (
 );
 
 @each $title, $url in $posters-map {
+  .carousel--#{$title} .carousel__background {
+    background-image: url($url);
+  }
   .carousel--#{$title} .carousel__image {
     background-image: url($url);
   }
