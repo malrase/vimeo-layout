@@ -1,62 +1,9 @@
-
 @import "reset";
 @import "variables";
+
+@import "card";
 
 body {
   color: $text-color;
   font-family: "Helvetica Neue", sans-serif;
-}
-
-.videos {
-  padding: 5rem .5rem;
-  @include bem("--primary") {
-    
-  }
-  @include bem("--secondary") {
-    background: linear-gradient(#111, #CCC);
-    color: white;
-  }
-}
-
-.card {
-  margin: auto;
-  max-width: 400px;
-  + .card {
-    margin-top: 5rem;
-  }
-  @include larger-than($screen-large) {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    max-width: 800px;
-  }
-  @include bem("--image-left") {
-    flex-direction: row-reverse;
-  }
-  .card__details, .card__image {
-    flex-basis: 50%;
-    flex-grow: 1;
-    padding: 0 1rem;
-  }
-  @include bem("__details") {
-    margin-bottom: 2rem;
-    @include larger-than($screen-large) {
-      margin-bottom: 0;
-    }
-  }
-  @include bem("__title") {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: .5rem;
-  }
-  @include bem("__text") {
-    line-height: 1.2rem;
-  }
-  @include bem("__image") {
-    img {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-    }
-  }
 }

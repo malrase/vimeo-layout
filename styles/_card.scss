@@ -1,0 +1,60 @@
+// These styles relate to the card component
+.card {
+  margin: 0 auto;
+  max-width: 400px;
+  // Accounts for cards that have a card above them
+  + .card {
+    margin-top: 5rem;
+  }
+  @include larger-than($screen-medium) {
+    max-width: 800px;
+  }
+  // Use flexbox to display items side-by-side on larger screens
+  @include larger-than($screen-large) {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+  }
+  // With this modifier class, the image will be left-aligned
+  @include bem("--image-left") {
+    flex-direction: row-reverse;
+  }
+  // Covers the card wrapping styles
+  @include bem("__wrapper") {
+    padding: 5rem .5rem;
+    @include larger-than($screen-medium) {
+      padding: 5rem;
+    }
+    @include bem("--secondary") {
+      background: $primary-gradient;
+      color: white;
+    }
+  }
+  .card__details, .card__image {
+    flex-basis: 50%;
+    flex-grow: 1;
+    padding: 0 1rem;
+  }
+  @include bem("__details") {
+    margin-bottom: 2rem;
+    @include larger-than($screen-large) {
+      margin-bottom: 0;
+    }
+  }
+  @include bem("__title") {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+  @include bem("__text") {
+    line-height: 1.2rem;
+  }
+  @include bem("__image") {
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+}

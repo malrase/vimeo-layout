@@ -6,14 +6,19 @@ $screen-large: 1200px;
 // Colors
 $text-color: #222;
 
-// Mixins
+$primary-gradient: linear-gradient(#111, #CCC);
+
+// MIXINS
+
+// BEM mixin takes a suffix argument and creates
+// a subsequent class from the parent class.
 @mixin bem($suffix) {
   &#{$suffix} {
     @content;
   }
 }
 
-// Media Queries
+// Media query mixin is purely for understandability
 @mixin larger-than($size) {
   @media (min-width: $size) {
     @content;
