@@ -3,8 +3,10 @@ $screen-small: 350px;
 $screen-medium: 500px;
 $screen-large: 1200px;
 
-// Mixins
+// Colors
+$text-color: #222;
 
+// Mixins
 @mixin bem($suffix) {
   &#{$suffix} {
     @content;
