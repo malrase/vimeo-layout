@@ -3,3 +3,14 @@
     @extend .button;
   }
 }
+
+$posters-map: (
+  wilderpeople: "https://upload.wikimedia.org/wikipedia/en/4/44/Hunt_for_the_Wilderpeople.png",
+  nichts-pasiert: "https://upload.wikimedia.org/wikipedia/en/e/e0/A_Decent_Man_%282015_Swiss_film%29.png",
+);
+
+@each $title, $url in $posters-map {
+  .carousel--#{$title} .carousel__image {
+    background-image: url($url);
+  }
+}
