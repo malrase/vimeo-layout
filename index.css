@@ -35,6 +35,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.button, .carousel__action {
+  background: inherit;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: 600;
+  padding: 1rem; }
+
 .card {
   margin: 0 auto;
   max-width: 400px; }

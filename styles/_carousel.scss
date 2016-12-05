@@ -1,0 +1,5 @@
+.carousel {
+  @include bem("__action") {
+    @extend .button;
+  }
+}
