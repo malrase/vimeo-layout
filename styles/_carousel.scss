@@ -1,3 +1,5 @@
+$poster-width: 260px;
+
 .carousel {
   color: white;
   position: relative;
@@ -36,21 +38,25 @@
   @include bem("__inner") {
     padding: .5rem;
     @include larger-than($screen-medium) {
-      display: flex;
       padding: 5rem;
     }
   }
   @include bem("__image") {
     background-repeat: no-repeat;
+    background-size: $poster-width 380px;
     display: inline-block;
     height: 380px;
-    width: 590px;
+    width: $poster-width;
   }
   @include bem("__details") {
     display: inline-block;
     padding-top: 1rem;
+    padding-left: 20px;
+    vertical-align: top;
     @include larger-than($screen-medium) {
       padding-top: 5rem;
+      // Calculate remaining size of carousel inner for details
+      max-width: calc(100% - (#{$poster-width} + 30px));
     }
   }
   @include bem("__title") {
@@ -66,6 +72,7 @@
       background: $carousel-primary;
       border: none;
       margin-right: 1rem;
+      margin-bottom: 1rem;
     }
   }
 }

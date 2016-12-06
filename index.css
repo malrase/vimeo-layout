@@ -125,19 +125,22 @@ body {
     padding: .5rem; }
     @media (min-width: 600px) {
       .carousel__inner {
-        display: flex;
         padding: 5rem; } }
   .carousel__image {
     background-repeat: no-repeat;
+    background-size: 260px 380px;
     display: inline-block;
     height: 380px;
-    width: 590px; }
+    width: 260px; }
   .carousel__details {
     display: inline-block;
-    padding-top: 1rem; }
+    padding-top: 1rem;
+    padding-left: 20px;
+    vertical-align: top; }
     @media (min-width: 600px) {
       .carousel__details {
-        padding-top: 5rem; } }
+        padding-top: 5rem;
+        max-width: calc(100% - (260px + 30px)); } }
   .carousel__title {
     font-size: 1.5rem;
     margin-bottom: 1rem; }
@@ -146,7 +149,8 @@ body {
   .carousel__action--buy {
     background: #336699;
     border: none;
-    margin-right: 1rem; }
+    margin-right: 1rem;
+    margin-bottom: 1rem; }
 
 .carousel--wilderpeople .carousel__background {
   background-image: url("https://upload.wikimedia.org/wikipedia/en/4/44/Hunt_for_the_Wilderpeople.png"); }
