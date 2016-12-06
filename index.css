@@ -37,7 +37,8 @@ table {
 
 body {
   color: #222;
-  font-family: "Helvetica Neue", sans-serif; }
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 1.2rem; }
 
 .button, .carousel__action {
   background: inherit;
@@ -86,8 +87,6 @@ body {
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: .5rem; }
-  .card__text {
-    line-height: 1.2rem; }
   .card__image img {
     display: block;
     margin: 0 auto;
@@ -123,18 +122,22 @@ body {
     width: 100%;
     z-index: -1; }
   .carousel__inner {
-    padding: 5rem; }
+    padding: .5rem; }
     @media (min-width: 600px) {
       .carousel__inner {
-        display: flex; } }
+        display: flex;
+        padding: 5rem; } }
   .carousel__image {
     background-repeat: no-repeat;
     display: inline-block;
     height: 380px;
-    width: 100%; }
+    width: 590px; }
   .carousel__details {
     display: inline-block;
-    padding-top: 5rem; }
+    padding-top: 1rem; }
+    @media (min-width: 600px) {
+      .carousel__details {
+        padding-top: 5rem; } }
   .carousel__title {
     font-size: 1.5rem;
     margin-bottom: 1rem; }

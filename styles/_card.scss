@@ -47,9 +47,6 @@
     font-weight: 700;
     margin-bottom: .5rem;
   }
-  @include bem("__text") {
-    line-height: 1.2rem;
-  }
   @include bem("__image") {
     img {
       display: block;
