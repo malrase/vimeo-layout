@@ -2,11 +2,24 @@
   color: white;
   position: relative;
   .carousel__previous, .carousel__next {
+    border-top: 2px solid #DDD;
+    border-left: 2px solid #DDD;
+    height: 15px;
     position: absolute;
       top: 50%;
+    width: 15px;
+    z-index: 2;
+    &:hover {
+      border-color: $carousel-primary;
+    }
+  }
+  @include bem("__previous") {
+    left: 1rem;
+    transform: rotate(315deg);
   }
   @include bem("__next") {
-      right: 0;
+    right: 1rem;
+    transform: rotate(135deg)
   }
   @include bem("__item") {
     position: relative;
@@ -14,7 +27,7 @@
   @include bem("__background") {
     background-position-y: 30%;
     background-size: 1200px;
-    filter: blur(15px);
+    filter: blur(25px);
     height: 100%;
     position: absolute;
     width: 100%;
@@ -45,6 +58,11 @@
   }
   @include bem("__action") {
     @extend .button;
+    @include bem("--buy") {
+      background: $carousel-primary;
+      border: none;
+      margin-right: 1rem;
+    }
   }
 }
 

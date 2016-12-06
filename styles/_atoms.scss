@@ -3,9 +3,11 @@
 
 .button {
   background: inherit;
-  border: 1px solid #DDD;
+  border: 1px solid $button-border;
+  color: $button-color;
   border-radius: 5px;
   display: inline-block;
+  font-size: 1rem;
   font-weight: 600;
   padding: 1rem;
 }

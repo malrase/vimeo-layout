@@ -42,8 +42,10 @@ body {
 .button, .carousel__action {
   background: inherit;
   border: 1px solid #DDD;
+  color: #FFF;
   border-radius: 5px;
   display: inline-block;
+  font-size: 1rem;
   font-weight: 600;
   padding: 1rem; }
 
@@ -95,16 +97,27 @@ body {
   color: white;
   position: relative; }
   .carousel .carousel__previous, .carousel .carousel__next {
+    border-top: 2px solid #DDD;
+    border-left: 2px solid #DDD;
+    height: 15px;
     position: absolute;
-    top: 50%; }
+    top: 50%;
+    width: 15px;
+    z-index: 2; }
+    .carousel .carousel__previous:hover, .carousel .carousel__next:hover {
+      border-color: #336699; }
+  .carousel__previous {
+    left: 1rem;
+    transform: rotate(315deg); }
   .carousel__next {
-    right: 0; }
+    right: 1rem;
+    transform: rotate(135deg); }
   .carousel__item {
     position: relative; }
   .carousel__background {
     background-position-y: 30%;
     background-size: 1200px;
-    filter: blur(15px);
+    filter: blur(25px);
     height: 100%;
     position: absolute;
     width: 100%;
@@ -127,6 +140,10 @@ body {
     margin-bottom: 1rem; }
   .carousel__text {
     margin-bottom: 1rem; }
+  .carousel__action--buy {
+    background: #336699;
+    border: none;
+    margin-right: 1rem; }
 
 .carousel--wilderpeople .carousel__background {
   background-image: url("https://upload.wikimedia.org/wikipedia/en/4/44/Hunt_for_the_Wilderpeople.png"); }
